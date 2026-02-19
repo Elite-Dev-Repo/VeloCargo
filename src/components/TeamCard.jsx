@@ -12,7 +12,7 @@ import {
 
 import avatar from "@/assets/avatar.jpg";
 import avatar2 from "@/assets/avatar2.jpg";
-import elite from "@/assets/elite.jpeg";
+import elite from "@/assets/Elite.jpeg";
 
 function TeamCard() {
   const teamMembers = [
