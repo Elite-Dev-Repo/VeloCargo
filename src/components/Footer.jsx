@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   return (
-    <footer id="#footer" className="relative w-full overflow-hidden">
+    <footer id="footer" className="relative w-full overflow-hidden">
       {/* Primary Color Tint Overlay Section */}
       <div className="bg-primary/5 border-t border-border pt-20 pb-10">
         <div className="cont grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10">

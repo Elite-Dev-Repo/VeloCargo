@@ -4,7 +4,7 @@ import TeamCard from "./TeamCard";
 const Team = () => {
   return (
     <section
-      id="#team"
+      id="team"
       className=" cont min-h-screen w-screen flex flex-col gap-8 items-center justify-around"
     >
       <div className="text-center mt-8">

@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 function Nav() {
   const navs = [
     { name: "Home", href: "/" },
-    { name: "Team", href: "#team" },
+    { name: "Team", href: "/#team" },
     { name: "Our Services", href: "/services" },
     { name: "Contact Us", href: "/#footer" },
   ];
