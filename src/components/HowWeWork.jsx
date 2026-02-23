@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 
 function HowWeWork() {
@@ -33,22 +34,35 @@ function HowWeWork() {
   };
 
   return (
-    <section className="min-h-screen w-full bg-primary py-20 px-10">
-      <div className="max-w-7xl mx-auto">
+    <section className="min-h-screen w-screen bg-primary py-20 px-10">
+      <div className="cont max-w-7xl mx-auto">
         <div className="flex flex-col items-start justify-center mb-16">
-          <h2 className="text-4xl font-semibold text-background text-left">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-4xl font-semibold text-background text-left"
+          >
             How We Work
-          </h2>
-          <p className="text-background/80 text-start max-w-2xl mt-4">
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-background/80 text-start max-w-2xl mt-4"
+          >
             VeloCargo streamlines logistics by leveraging AI-powered tracking
             and real-time visibility. Our platform ensures seamless coordination
             across global networks.
-          </p>
+          </motion.p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
           {steps.map((step, index) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
               key={index}
               className={`${paddingMap[index]} text-white w-60 flex flex-col items-start`}
             >
@@ -57,7 +71,7 @@ function HowWeWork() {
               <p className="text-sm leading-relaxed text-white/70">
                 {step.description}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

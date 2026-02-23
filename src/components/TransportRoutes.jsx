@@ -2,6 +2,7 @@ import { HugeiconsIcon } from "@hugeicons/react";
 import { ArrowUpRight01Icon } from "@hugeicons/core-free-icons";
 import React from "react";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 function TransportRoutes() {
   const routes = [
@@ -27,9 +28,19 @@ function TransportRoutes() {
 
   return (
     <section className="bg-background min-h-[80vh] w-full py-24">
-      <div className="cont flex flex-col-reverse lg:flex-row items-center justify-between gap-16 lg:gap-24">
+      <div
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        className="cont flex flex-col-reverse lg:flex-row items-center justify-between gap-16 lg:gap-24"
+      >
         {/* Route Cards List */}
-        <div className="flex flex-col gap-6 w-full lg:flex-1 max-w-xl">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          className="flex flex-col gap-6 w-full lg:flex-1 max-w-xl"
+        >
           {routes.map((route) => (
             <div
               key={route.id}
@@ -55,10 +66,15 @@ function TransportRoutes() {
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Text Content Area */}
-        <div className="flex flex-col items-center lg:items-start text-center lg:text-left lg:flex-1 space-y-8">
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="flex flex-col items-center lg:items-start text-center lg:text-left lg:flex-1 space-y-8"
+        >
           <div className="space-y-4">
             <h4 className="text-primary font-bold uppercase tracking-[0.25em] text-xs">
               Global Network
@@ -76,18 +92,20 @@ function TransportRoutes() {
             complexity of the route.
           </p>
 
-          <Button
-            size="lg"
-            className="h-16 px-10 bg-primary text-white rounded-xl hover:opacity-90 transition-all shadow-xl shadow-primary/20 group"
-          >
-            Explore Services
-            <HugeiconsIcon
-              icon={ArrowUpRight01Icon}
-              className="ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
-              size={20}
-            />
-          </Button>
-        </div>
+          <a href="/services">
+            <Button
+              size="lg"
+              className="h-16 px-10 bg-primary text-white rounded-xl hover:opacity-90 transition-all shadow-xl shadow-primary/20 group"
+            >
+              Explore Services
+              <HugeiconsIcon
+                icon={ArrowUpRight01Icon}
+                className="ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
+                size={20}
+              />
+            </Button>
+          </a>
+        </motion.div>
       </div>
     </section>
   );

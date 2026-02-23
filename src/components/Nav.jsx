@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { MenuIcon } from "lucide-react";
 import {
   Sheet,
@@ -10,6 +10,7 @@ import {
 import { Button } from "@/components/ui/button";
 
 function Nav() {
+  const [isScrolled, setIsScrolled] = useState(false);
   const navs = [
     { name: "Home", href: "/" },
     { name: "Team", href: "/#team" },
@@ -17,9 +18,31 @@ function Nav() {
     { name: "Contact Us", href: "/#footer" },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      // Change state if user scrolls more than 50px
+      if (window.scrollY > 150) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="sticky top-5 z-[30] w-[95%] max-w-7xl mx-auto">
-      <div className="h-[70px] bg-background/80 backdrop-blur-xl border border-border shadow-lg rounded-2xl md:rounded-full px-6 flex items-center justify-between">
+    <nav className="fixed top-5 z-[30] left-1/2 -translate-x-1/2  w-[95%] max-w-7xl mx-auto">
+      <div
+        className={`h-[70px] backdrop-blur-xl rounded-2xl md:rounded-lg px-6 flex items-center justify-between *:
+         ${
+           isScrolled
+             ? "bg-white backdrop-blur-md text-foreground shadow-2xl py-2"
+             : " bg-transparent py-4 text-white"
+         }
+        `}
+      >
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 group">
           <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white font-bold group-hover:rotate-12 transition-transform">
@@ -36,7 +59,7 @@ function Nav() {
             <li key={index}>
               <a
                 href={nav.href}
-                className="text-sm font-medium text-muted-foreground px-5 py-2 hover:text-foreground hover:bg-foreground/5 rounded-full transition-all"
+                className="text-sm font-medium  px-5 py-2 hover:bg-foreground/15 rounded-full transition-all"
               >
                 {nav.name}
               </a>

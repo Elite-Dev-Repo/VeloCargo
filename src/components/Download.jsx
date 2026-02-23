@@ -7,9 +7,9 @@ const Download = () => {
   return (
     <section className="cont min-h-[50vh] md:h-[80vh] flex items-center justify-center py-20">
       {/* Main Blue Card */}
-      <div className="relative w-full py-4 bg-primary rounded-[2.5rem] overflow-hidden flex flex-col lg:flex-row items-center justify-between px-8 md:px-16 pt-12 lg:pt-0 shadow-2xl">
+      <div className="relative w-full bg-primary rounded-[2.5rem] overflow-hidden flex flex-col lg:flex-row items-center justify-between px-8 md:px-16 pt-12 lg:pt-0 shadow-2xl">
         {/* Text Content */}
-        <div className="z-10 max-w-lg space-y-3 py-2 pb-12 lg:pb-0 text-center lg:text-left">
+        <div className="z-10 max-w-lg space-y-3 py-16  text-center lg:text-left">
           <h3 className="text-3xl md:text-4xl font-bold text-white leading-tight">
             Download the free <br /> VeloCargo App
           </h3>

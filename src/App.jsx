@@ -27,27 +27,47 @@ function App() {
   return (
     <>
       <Nav />
-      <header className="bg-primary h-screen max-w-screen mt-[-65px] rounded-b-[5em]">
-        <section className=" cont flex items-center justify-between relative  h-full">
+      <header className="bg-primary h-screen w-screen  rounded-b-[5em]">
+        <section className=" cont flex items-center justify-between relative h-full">
           <div className="flex-1 flex flex-col gap-2 max-md:items-center">
-            <div className="inline-flex items-center gap-3 px-6 py-1.5 w-fit rounded-full bg-white/15 border border-white/10 text-background text-[13px] font-light uppercase tracking-wide backdrop-blur-md">
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              className="inline-flex items-center gap-3 px-6 py-1.5 w-fit rounded-full bg-white/15 border border-white/10 text-background text-[13px] font-light uppercase tracking-wide backdrop-blur-md"
+            >
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-background"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-background"></span>
               </span>
               <span>Real-time tracking now live</span>
-            </div>
-            <h1 className="text-5xl text-start md:text-7xl font-semibold text-white tracking-tight leading-[1.1]">
+            </motion.div>
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-5xl text-start md:text-7xl font-semibold text-white tracking-tight leading-[1.1]"
+            >
               Global Logistics <br />
               <span className="text-foreground">Redefined.</span>
-            </h1>
+            </motion.h1>
 
-            <p className="text-background text-md md:text-md max-w-lg leading-relaxed">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="text-background text-md md:text-md max-w-lg leading-relaxed"
+            >
               Experience the next generation of cargo management. From ocean to
               air, VeloCargo delivers with unprecedented speed and AI-driven
               precision.
-            </p>
-            <div className="flex flex-wrap gap-4">
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="flex flex-wrap gap-4"
+            >
               <Button
                 size="lg"
                 className="bg-foreground hover:bg-background hover:text-foreground text-white rounded-lg px-8 py-4"
@@ -59,15 +79,25 @@ function App() {
                   size={20}
                 />
               </Button>
-            </div>
+            </motion.div>
           </div>
 
-          <div className="flex-1 w-180 max-md:hidden absolute right-[-10em] top-[60%] -translate-y-1/2">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            className="flex-1 w-180 max-md:hidden absolute right-[-10em] top-[60%] -translate-y-1/2"
+          >
             <img src={hero} alt="Hero" className="w-full h-full object-cover" />
-          </div>
+          </motion.div>
         </section>
 
-        <div className="w-[95%] lg:w-[75%] max-w-5xl absolute bottom-[-5rem] lg:bottom-[-6em] left-1/2 -translate-x-1/2 bg-background shadow-[0_32px_64px_-15px_rgba(0,0,0,0.2)] border border-border backdrop-blur-xl rounded-2xl overflow-hidden z-20">
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          className="w-[95%] lg:w-[75%] max-w-5xl absolute bottom-[-5rem] lg:bottom-[-6em] left-1/2 -translate-x-1/2 bg-background shadow-[0_16px_6px_-15px_rgba(0,0,0,0.2)] border border-border backdrop-blur-xl rounded-2xl overflow-hidden z-20"
+        >
           {/* Terminal Header */}
           <div className="bg-foreground/[0.03] border-b border-border px-6 py-3 flex items-center justify-between">
             <div className="flex items-center gap-4">
@@ -134,7 +164,7 @@ function App() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </header>
 
       <TransportRoutes />
