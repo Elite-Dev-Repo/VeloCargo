@@ -45,7 +45,7 @@ function Nav() {
       >
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 bg-primary2 rounded-lg flex items-center justify-center text-white font-bold group-hover:rotate-12 transition-transform">
+          <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white font-bold group-hover:rotate-12 transition-transform">
             V
           </div>
           <span

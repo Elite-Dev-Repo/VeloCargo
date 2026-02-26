@@ -73,7 +73,7 @@ html {
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(65.343% 0.16345 244.952);
+  --primary: #db5e09;
   --primary2: oklch(83.711% 0.14198 84.062);
 
   --primary-foreground: oklch(0.985 0 0);
