@@ -1,6 +1,13 @@
 import { Badge } from "@/components/ui/badge";
 
 import { Button } from "@/components/ui/button";
+import { HugeiconsIcon } from "@hugeicons/react";
+import {
+  NewTwitterIcon,
+  WhatsappIcon,
+  X,
+} from "@hugeicons/core-free-icons/index";
+import { Mail, Twitter } from "lucide-react";
 import {
   Card,
   CardAction,
@@ -57,7 +64,21 @@ function TeamCard() {
           <CardDescription>{member.role}</CardDescription>
         </CardHeader>
         <CardFooter>
-          <Button className="w-full">View Profile</Button>
+          <div className="flex w-full items-center justify-center gap-6">
+            <div className="flex flex-1 gap-4">
+              <HugeiconsIcon
+                icon={WhatsappIcon}
+                className="w-5 h-5 cursor-pointer hover:text-amber-500 transition-colors"
+              />
+              <HugeiconsIcon
+                icon={NewTwitterIcon}
+                className="w-5 h-5 cursor-pointer hover:text-amber-500 transition-colors"
+              />
+              <Mail className="w-5 h-5 cursor-pointer hover:text-amber-500 transition-colors" />
+            </div>
+
+            <Button className="flex-1">View Profile</Button>
+          </div>
         </CardFooter>
       </Card>
     </motion.div>

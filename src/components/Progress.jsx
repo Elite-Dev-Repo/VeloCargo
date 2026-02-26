@@ -20,7 +20,7 @@ function Progress() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="flex-1 max-w-xl text-start bg-background/40 backdrop-blur-2xl border border-foreground/10 rounded-3xl p-8 md:p-12 shadow-2xl"
+          className="flex-1 max-w-screen w-120 text-start bg-background/40 backdrop-blur-2xl border border-foreground/10 rounded-3xl p-8 md:p-12 shadow-2xl"
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest mb-6">
             Logistics Metrics

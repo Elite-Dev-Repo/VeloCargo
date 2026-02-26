@@ -21,7 +21,7 @@ function Nav() {
   useEffect(() => {
     const handleScroll = () => {
       // Change state if user scrolls more than 50px
-      if (window.scrollY > 150) {
+      if (window.scrollY > 100) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -35,7 +35,7 @@ function Nav() {
   return (
     <nav className="fixed top-5 z-[30] left-1/2 -translate-x-1/2  w-[95%] max-w-7xl mx-auto">
       <div
-        className={`h-[70px] backdrop-blur-xl rounded-2xl md:rounded-lg px-6 flex items-center justify-between *:
+        className={`h-[70px] rounded-2xl md:rounded-lg px-6 flex items-center justify-between *:
          ${
            isScrolled
              ? "bg-white backdrop-blur-md text-foreground shadow-2xl py-2"
@@ -45,10 +45,15 @@ function Nav() {
       >
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white font-bold group-hover:rotate-12 transition-transform">
+          <div className="w-8 h-8 bg-primary2 rounded-lg flex items-center justify-center text-white font-bold group-hover:rotate-12 transition-transform">
             V
           </div>
-          <span className="text-xl font-black tracking-tighter text-foreground">
+          <span
+            className={`text-xl font-black tracking-tighter
+            
+            ${isScrolled ? "text-foreground" : " text-background"}
+            `}
+          >
             VELOCARGO
           </span>
         </a>
