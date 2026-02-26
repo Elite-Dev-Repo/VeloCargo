@@ -28,7 +28,7 @@ function App() {
   return (
     <>
       <Nav />
-      <header className="bg-primary h-screen w-screen  rounded-b-[5em] relative overflow-hidden">
+      <header className="bg-primary h-screen w-screen relative overflow-hidden">
         <img
           src={velo}
           alt="Cargo Ship at Sea"
