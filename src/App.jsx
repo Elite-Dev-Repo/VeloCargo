@@ -34,8 +34,8 @@ function App() {
           alt="Cargo Ship at Sea"
           className="w-full h-full absolute inset-0 z-1 object-cover grayscale-[0.2]"
         />
-        <section className=" w-full h-full absolute z-2  bg-foreground/20">
-          <div className=" cont w-full h-full flex flex-col lg:flex-row lg:items-end pb-6 justify-center gap-2 max-md:items-center">
+        <section className=" w-full h-full absolute z-2  bg-gradient-to-b from-transparent to-black/90">
+          <div className=" h-full cont w-full flex flex-col lg:flex-row relative lg:items-end pb-6 justify-center gap-2 max-md:items-center">
             <div className="flex-1 backdrop-blur-[1px] w-full flex flex-col gap-3 items-start max-sm:items-center justify-center  ">
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
