@@ -20,6 +20,7 @@ import HowWeWork from "./components/HowWeWork";
 import Progress from "./components/Progress";
 import Download from "./components/Download";
 import Team from "./components/Team";
+import Choose from "./components/Choose";
 import { motion } from "framer-motion";
 import velo from "@/assets/velo.jpg";
 import { KeyRound, Lock } from "lucide-react";
@@ -93,7 +94,7 @@ function App() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
-              className="w-100 max-sm:hidden bg-white h-70 backdrop-blur-[5px] rounded-lg"
+              className="w-100 max-sm:hidden bg-white h-70 backdrop-blur-[15px] rounded-lg"
             >
               <div className="">
                 {" "}
@@ -138,6 +139,7 @@ function App() {
 
       <TransportRoutes />
       <HowWeWork />
+      <Choose />
       <Progress />
       <Team />
       <Download />
